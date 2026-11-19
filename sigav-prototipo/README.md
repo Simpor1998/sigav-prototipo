@@ -16,6 +16,5 @@ Incluye ocho pantallas de alta fidelidad distribuidas en tres perfiles:
 
 - `css/tokens.css`: paleta, tipografía y espaciado del sistema de diseño.
 - `js/validaciones.js`: validación de notas, fechas y selección de materias.
-- `pruebas.html`: pruebas de las funciones de validación.
 
 **Autores:** Nathalia Maya Ramírez, Guillermo Andrés Hernández Hoyos, Eduardo Prado Upiales, Camilo Ernesto Charry Caicedo.
