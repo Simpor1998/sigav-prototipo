@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo periodo académico · SIGAV</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/componentes.css">
+  <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body data-pagina="a2" data-perfil="administradora">
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+  <aside class="sidebar" id="sidebar" aria-label="Menú lateral de la administradora">
+    <div class="sidebar__marca">
+      <span class="logo" aria-hidden="true">SIGAV</span>
+      <span class="sidebar__nombre-sistema">Sistema de Gestión Académica Virtual</span>
+    </div>
+    <p class="sidebar__etiqueta">Menú administradora</p>
+    <ul class="nav-lista">
+      <li><a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>Reportes</a></li>
+      <li>
+        <a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>Configuración</a>
+        <ul class="nav-sublista">
+          <li><a href="../index.html#en-construccion">Gestión de usuarios</a></li>
+          <li><a href="a1-periodos.html" data-nav="a2">Periodos académicos</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="sidebar__perfil">
+      <span class="avatar" aria-hidden="true">AD</span>
+      <div><strong>Administradora</strong><span>SIGAV</span></div>
+    </div>
+  </aside>
+  <div class="sidebar-backdrop"></div>
+
+  <div class="contenedor-app">
+    <header class="barra-superior">
+      <span class="logo" aria-hidden="true">SIGAV</span>
+      <strong>SIGAV</strong>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Abrir menú">
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </header>
+
+    <main id="contenido" class="contenido">
+      <nav class="migaja" aria-label="Ruta de navegación"><a href="a1-periodos.html">Periodos académicos</a> &gt; <span class="migajaspan">Nuevo periodo</span></nav>
+      <h1>Nuevo periodo académico</h1>
+
+      <div class="acordeon" id="acordeon-reglas">
+        <button class="acordeon__boton" type="button" id="boton-reglas" aria-expanded="false" aria-controls="contenido-reglas">
+          Reglas de validación
+          <svg class="icono icono--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="acordeon__contenido" id="contenido-reglas">
+          <section class="tarjeta reglas-card" aria-labelledby="titulo-reglas">
+            <h2 id="titulo-reglas" class="tarjeta__titulo">Reglas de validación</h2>
+            <ul class="reglas">
+              <li>El nombre del periodo es obligatorio.</li>
+              <li>La fecha de fin debe ser posterior a la de inicio.</li>
+              <li>El plazo de matrícula debe estar dentro del periodo.</li>
+              <li>El periodo no debe cruzarse con otro periodo existente.</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="rejilla-2">
+        <div>
+          <div class="banner banner--exito" id="banner-creado" role="status" hidden>
+            <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <div class="banner__contenido"><p>El periodo se creó correctamente.</p></div>
+          </div>
+
+          <div class="banner banner--advertencia" id="aviso-cruce" role="alert" hidden>
+            <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5M12 17h.01"/></svg>
+            <div class="banner__contenido"><p data-banner-texto></p></div>
+            <div class="banner__accion"><a class="btn btn-secundario" id="enlace-cruce" href="a1-periodos.html">Ver periodo</a></div>
+          </div>
+
+          <section class="tarjeta formulario-periodo" aria-labelledby="titulo-formulario">
+            <h2 id="titulo-formulario" class="tarjeta__titulo">Datos del periodo</h2>
+
+            <div class="campo" id="campo-nombre">
+              <label for="nombre-periodo">Nombre del periodo <span class="obligatorio" aria-hidden="true">*</span></label>
+              <input id="nombre-periodo" type="text" placeholder="Ejemplo: 2027-1" aria-describedby="error-nombre">
+              <span class="campo__error" id="error-nombre" role="alert"><svg class="icono icono--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5M12 17h.01"/></svg>Este campo es obligatorio</span>
+            </div>
+
+            <div class="campo">
+              <label for="fecha-inicio">Fecha de inicio <span class="obligatorio" aria-hidden="true">*</span></label>
+              <input id="fecha-inicio" type="date">
+            </div>
+
+            <div class="campo" id="campo-fecha-fin">
+              <label for="fecha-fin">Fecha de fin <span class="obligatorio" aria-hidden="true">*</span></label>
+              <input id="fecha-fin" type="date" aria-describedby="error-fecha-fin">
+              <span class="campo__error" id="error-fecha-fin" role="alert"><svg class="icono icono--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5M12 17h.01"/></svg>La fecha de fin debe ser posterior a la fecha de inicio</span>
+            </div>
+
+            <div class="campo">
+              <label for="plazo-inicio">Inicio del plazo de matrícula <span class="obligatorio" aria-hidden="true">*</span></label>
+              <input id="plazo-inicio" type="date">
+            </div>
+
+            <div class="campo" id="campo-plazo-fin">
+              <label for="plazo-fin">Fin del plazo de matrícula <span class="obligatorio" aria-hidden="true">*</span></label>
+              <input id="plazo-fin" type="date" aria-describedby="advertencia-plazo">
+              <span class="campo__advertencia" id="advertencia-plazo" role="status"><svg class="icono icono--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5M12 17h.01"/></svg>El plazo de matrícula debe estar dentro del periodo</span>
+            </div>
+          </section>
+
+          <div class="botones-formulario">
+            <a class="btn btn-secundario" href="a1-periodos.html">Cancelar</a>
+            <button class="btn btn-primario" type="button" id="guardar-periodo" disabled>Guardar periodo</button>
+          </div>
+        </div>
+
+        <div class="reglas-escritorio">
+          <section class="tarjeta reglas-card" aria-labelledby="titulo-reglas-escritorio">
+            <h2 id="titulo-reglas-escritorio" class="tarjeta__titulo">Reglas de validación</h2>
+            <ul class="reglas">
+              <li>El nombre del periodo es obligatorio.</li>
+              <li>La fecha de fin debe ser posterior a la de inicio.</li>
+              <li>El plazo de matrícula debe estar dentro del periodo.</li>
+              <li>El periodo no debe cruzarse con otro periodo existente.</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navegación principal móvil">
+    <a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>Reportes</a>
+    <a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>Configuración</a>
+    <a href="a1-periodos.html" data-nav="a2" class="activo" aria-current="page"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Periodos</a>
+    <a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Perfil</a>
+  </nav>
+
+  <script src="../js/datos.js"></script>
+  <script src="../js/navegacion.js"></script>
+  <script src="../js/validaciones.js"></script>
+  <script>
+    (function () {
+      const nombre = document.getElementById('nombre-periodo');
+      const inicio = document.getElementById('fecha-inicio');
+      const fin = document.getElementById('fecha-fin');
+      const plazoInicio = document.getElementById('plazo-inicio');
+      const plazoFin = document.getElementById('plazo-fin');
+      const guardar = document.getElementById('guardar-periodo');
+      const avisoCruce = document.getElementById('aviso-cruce');
+      const enlaceCruce = document.getElementById('enlace-cruce');
+      const campos = [nombre, inicio, fin, plazoInicio, plazoFin];
+
+      function alternarError(id, activo) {
+        document.getElementById(id).classList.toggle('campo--error', activo);
+      }
+
+      function alternarAdvertencia(id, activo) {
+        document.getElementById(id).classList.toggle('campo--advertencia', activo);
+      }
+
+      function validar() {
+        let valido = true;
+
+        const nombreVacio = nombre.value.trim() === '';
+        alternarError('campo-nombre', nombreVacio);
+        if (nombreVacio) valido = false;
+
+        const fechasCompletas = inicio.value !== '' && fin.value !== '';
+        const rangoInvalido = fechasCompletas && !validarRangoFechas(inicio.value, fin.value);
+        alternarError('campo-fecha-fin', rangoInvalido);
+        if (rangoInvalido) valido = false;
+
+        const plazoCompleto = plazoInicio.value !== '' && plazoFin.value !== '';
+        const plazoInvalido = fechasCompletas && plazoCompleto && !validarPlazoMatricula(plazoInicio.value, plazoFin.value, inicio.value, fin.value);
+        alternarAdvertencia('campo-plazo-fin', plazoInvalido);
+        if (plazoInvalido) valido = false;
+
+        let periodoCruzado = null;
+        if (fechasCompletas) {
+          periodoCruzado = SIGAV.periodos.find((periodo) => (
+            inicio.value < periodo.fin && fin.value > periodo.inicio
+          ));
+        }
+
+        if (periodoCruzado) {
+          avisoCruce.hidden = false;
+          avisoCruce.querySelector('[data-banner-texto]').textContent = `Este periodo se cruza con ${periodoCruzado.nombre}`;
+          enlaceCruce.href = `a1-periodos.html#periodo-${periodoCruzado.nombre}`;
+          enlaceCruce.textContent = `Ver periodo ${periodoCruzado.nombre}`;
+          valido = false;
+        } else {
+          avisoCruce.hidden = true;
+        }
+
+        guardar.disabled = !valido;
+        return valido;
+      }
+
+      campos.forEach((campo) => campo.addEventListener('input', validar));
+      document.getElementById('boton-reglas').addEventListener('click', (evento) => {
+        const abierto = document.getElementById('acordeon-reglas').classList.toggle('abierto');
+        evento.currentTarget.setAttribute('aria-expanded', String(abierto));
+      });
+
+      guardar.addEventListener('click', () => {
+        if (!validar()) return;
+        document.getElementById('banner-creado').hidden = false;
+        guardar.disabled = true;
+        window.setTimeout(() => { window.location.href = 'a1-periodos.html'; }, 2000);
+      });
+
+      validar();
+    })();
+  </script>
+</body>
+</html>

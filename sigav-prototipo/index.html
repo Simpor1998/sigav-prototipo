@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGAV · Prototipo académico</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+  <div class="contenedor-app">
+    <header class="barra-superior">
+      <span class="logo" aria-hidden="true">SIGAV</span>
+      <strong>SIGAV</strong>
+      <span class="texto-micro">Sistema de Gestión Académica Virtual</span>
+    </header>
+
+    <main id="contenido" class="contenido">
+      <div class="portada">
+        <div class="portada__cabecera">
+          <div class="sidebar__marca portada__marca">
+            <span class="logo" aria-hidden="true">SIGAV</span>
+            <span class="sidebar__nombre-sistema">Sistema de Gestión Académica Virtual</span>
+          </div>
+          <h1 class="portada__titulo">SIGAV · Prototipo académico</h1>
+          <p class="texto-secundario">Sistema de Gestión Académica Virtual · Ingeniería de Sistemas · Universidad Santiago de Cali</p>
+          <p class="texto-auxiliar">Prototipo navegable de alta fidelidad. Selecciona una pantalla por perfil para revisarla en escritorio o en móvil.</p>
+        </div>
+
+        <section class="grupo-enlaces" aria-labelledby="perfil-estudiante">
+          <h2 id="perfil-estudiante">Perfil estudiante</h2>
+          <ul class="lista-enlaces">
+            <li><a href="estudiante/e1-panel.html"><span>E1 · Panel principal</span><span aria-hidden="true">→</span></a></li>
+            <li><a href="estudiante/e2-registro-materias.html"><span>E2 · Registro de materias</span><span aria-hidden="true">→</span></a></li>
+            <li><a href="estudiante/e3-pago.html"><span>E3 · Resumen de pago y confirmación</span><span aria-hidden="true">→</span></a></li>
+          </ul>
+        </section>
+
+        <section class="grupo-enlaces" aria-labelledby="perfil-profesor">
+          <h2 id="perfil-profesor">Perfil profesor</h2>
+          <ul class="lista-enlaces">
+            <li><a href="profesor/p1-materias.html"><span>P1 · Materias asignadas</span><span aria-hidden="true">→</span></a></li>
+            <li><a href="profesor/p2-registro-notas.html"><span>P2 · Registro de notas</span><span aria-hidden="true">→</span></a></li>
+          </ul>
+        </section>
+
+        <section class="grupo-enlaces" aria-labelledby="perfil-administradora">
+          <h2 id="perfil-administradora">Perfil administradora</h2>
+          <ul class="lista-enlaces">
+            <li><a href="administradora/a1-periodos.html"><span>A1 · Periodos académicos</span><span aria-hidden="true">→</span></a></li>
+            <li><a href="administradora/a2-nuevo-periodo.html"><span>A2 · Nuevo periodo académico</span><span aria-hidden="true">→</span></a></li>
+          </ul>
+        </section>
+
+        <section class="banner banner--info" id="en-construccion" aria-labelledby="titulo-en-construccion">
+          <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg>
+          <div class="banner__contenido">
+            <h2 id="titulo-en-construccion">En construcción</h2>
+            <p>Este módulo no está incluido en el prototipo académico.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

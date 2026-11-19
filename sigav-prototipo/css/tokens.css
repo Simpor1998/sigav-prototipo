@@ -1,0 +1,44 @@
+:root {
+  /* Color */
+  --color-primario: #1E3A5F;
+  --color-secundario: #0F766E;
+  --color-acento: #2563EB;
+  --color-fondo: #F8FAFC;
+  --color-superficie: #FFFFFF;
+  --color-borde: #E2E8F0;
+  --color-texto: #0F172A;
+  --color-texto-secundario: #475569;
+  --color-exito: #15803D;
+  --color-exito-fondo: #F0FDF4;
+  --color-advertencia: #B45309;
+  --color-advertencia-fondo: #FFFBEB;
+  --color-error: #B91C1C;
+  --color-error-fondo: #FEF2F2;
+  --color-info: #1D4ED8;
+  --color-info-fondo: #EFF6FF;
+  --color-gris: #475569;
+  --color-gris-fondo: #F1F5F9;
+
+  /* Tipografía */
+  --fuente: 'Inter', Arial, sans-serif;
+  --texto-h1: 2rem;      /* 32px */
+  --texto-h2: 1.5rem;    /* 24px */
+  --texto-h3: 1.25rem;   /* 20px */
+  --texto-cuerpo: 1rem;  /* 16px */
+  --texto-auxiliar: 0.875rem; /* 14px */
+  --texto-micro: 0.75rem;     /* 12px */
+
+  /* Espaciado (escala 4px) */
+  --e1: 4px; --e2: 8px; --e3: 12px; --e4: 16px;
+  --e5: 24px; --e6: 32px; --e7: 48px;
+
+  /* Forma y elevación */
+  --radio-control: 8px;
+  --radio-tarjeta: 12px;
+  --sombra: 0 1px 2px rgba(15, 23, 42, 0.06);
+
+  /* Layout */
+  --ancho-sidebar: 256px;
+  --margen-escritorio: 32px;
+  --margen-movil: 16px;
+}

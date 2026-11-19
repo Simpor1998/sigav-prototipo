@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de notas · SIGAV</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/componentes.css">
+  <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body data-pagina="p2" data-perfil="profesor">
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+  <aside class="sidebar" id="sidebar" aria-label="Menú lateral del profesor">
+    <div class="sidebar__marca">
+      <span class="logo" aria-hidden="true">SIGAV</span>
+      <span class="sidebar__nombre-sistema">Sistema de Gestión Académica Virtual</span>
+    </div>
+    <p class="sidebar__etiqueta">Menú profesor</p>
+    <ul class="nav-lista">
+      <li><a href="p1-materias.html"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Inicio</a></li>
+      <li><a href="p1-materias.html" class="activo" aria-current="page" data-nav="p2"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3V5z"/><path d="M8 5v16"/></svg>Materias asignadas</a></li>
+      <li><a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>Clases virtuales</a></li>
+      <li><a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5a3 3 0 0 1 0 6M17 14a6 6 0 0 1 4 6"/></svg>Consulta de estudiantes</a></li>
+    </ul>
+    <div class="sidebar__perfil">
+      <span class="avatar" aria-hidden="true">CR</span>
+      <div><strong>Carlos Ramírez</strong><span>Profesor</span></div>
+    </div>
+  </aside>
+  <div class="sidebar-backdrop"></div>
+
+  <div class="contenedor-app">
+    <header class="barra-superior">
+      <span class="logo" aria-hidden="true">SIGAV</span>
+      <strong>SIGAV</strong>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Abrir menú">
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </header>
+
+    <main id="contenido" class="contenido">
+      <nav class="migaja" aria-label="Ruta de navegación"><a href="p1-materias.html">Materias asignadas</a> &gt; <span class="migajaspan">Cálculo II</span></nav>
+      <h1>Registro de notas</h1>
+
+      <div class="campo campo--corte">
+        <label for="corte">Corte</label>
+        <select id="corte">
+          <option selected>Corte 1 · 30 %</option>
+        </select>
+        <span class="campo__ayuda">Porcentaje del corte en la nota final</span>
+      </div>
+
+      <div class="banner banner--exito" id="banner-exito" role="status" hidden>
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        <div class="banner__contenido"><p>Las notas se registraron correctamente.</p></div>
+      </div>
+
+      <div class="tabla-contenedor tabla-contenedor--p2">
+        <table class="tabla tabla--notas">
+          <thead><tr><th scope="col">Código</th><th scope="col">Nombre</th><th scope="col">Nota</th><th scope="col">Observación</th></tr></thead>
+          <tbody>
+            <tr>
+              <td data-etiqueta="Código">20260001</td>
+              <td data-etiqueta="Nombre">Angelo López</td>
+              <td data-etiqueta="Nota"><div class="campo campo--compacto"><label class="sr-only" for="nota-0">Nota de Angelo López</label><input class="input-nota" id="nota-0" type="number" step="0.1" min="0" max="5" value="4.5" data-index="0" aria-describedby="error-nota-0"><span class="campo__error" id="error-nota-0" role="alert"><svg class="icono icono--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5M12 17h.01"/></svg>La nota debe estar entre 0.0 y 5.0</span></div></td>
+              <td data-etiqueta="Observación"><div class="campo campo--compacto"><label class="sr-only" for="obs-0">Observación de Angelo López</label><input id="obs-0" type="text" value="Participación activa"></div></td>
+            </tr>
+            <tr>
+              <td data-etiqueta="Código">20260002</td>
+              <td data-etiqueta="Nombre">Valentina Ruiz</td>
+              <td data-etiqueta="Nota"><div class="campo campo--compacto"><label class="sr-only" for="nota-1">Nota de Valentina Ruiz</label><input class="input-nota" id="nota-1" type="number" step="0.1" min="0" max="5" value="3.8" data-index="1" aria-describedby="error-nota-1"><span class="campo__error" id="error-nota-1" role="alert"><svg class="icono icono--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5M12 17h.01"/></svg>La nota debe estar entre 0.0 y 5.0</span></div></td>
+              <td data-etiqueta="Observación"><div class="campo campo--compacto"><label class="sr-only" for="obs-1">Observación de Valentina Ruiz</label><input id="obs-1" type="text" value=""></div></td>
+            </tr>
+            <tr class="fila--error">
+              <td data-etiqueta="Código">20260003</td>
+              <td data-etiqueta="Nombre">Juan David Moreno</td>
+              <td data-etiqueta="Nota"><div class="campo campo--compacto campo--error"><label class="sr-only" for="nota-2">Nota de Juan David Moreno</label><input class="input-nota" id="nota-2" type="number" step="0.1" min="0" max="5" value="6.2" data-index="2" aria-invalid="true" aria-describedby="error-nota-2"><span class="campo__error" id="error-nota-2" role="alert"><svg class="icono icono--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5M12 17h.01"/></svg>La nota debe estar entre 0.0 y 5.0</span></div></td>
+              <td data-etiqueta="Observación"><div class="campo campo--compacto"><label class="sr-only" for="obs-2">Observación de Juan David Moreno</label><input id="obs-2" type="text" value="Revisar nota"></div></td>
+            </tr>
+            <tr>
+              <td data-etiqueta="Código">20260004</td>
+              <td data-etiqueta="Nombre">María Fernanda Ortiz</td>
+              <td data-etiqueta="Nota"><div class="campo campo--compacto"><label class="sr-only" for="nota-3">Nota de María Fernanda Ortiz</label><input class="input-nota" id="nota-3" type="number" step="0.1" min="0" max="5" value="4.1" data-index="3" aria-describedby="error-nota-3"><span class="campo__error" id="error-nota-3" role="alert"><svg class="icono icono--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5M12 17h.01"/></svg>La nota debe estar entre 0.0 y 5.0</span></div></td>
+              <td data-etiqueta="Observación"><div class="campo campo--compacto"><label class="sr-only" for="obs-3">Observación de María Fernanda Ortiz</label><input id="obs-3" type="text" value=""></div></td>
+            </tr>
+            <tr>
+              <td data-etiqueta="Código">20260005</td>
+              <td data-etiqueta="Nombre">Santiago Vargas</td>
+              <td data-etiqueta="Nota"><div class="campo campo--compacto"><label class="sr-only" for="nota-4">Nota de Santiago Vargas</label><input class="input-nota" id="nota-4" type="number" step="0.1" min="0" max="5" value="" data-index="4" aria-describedby="error-nota-4"><span class="campo__error" id="error-nota-4" role="alert"><svg class="icono icono--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5M12 17h.01"/></svg>La nota debe estar entre 0.0 y 5.0</span></div></td>
+              <td data-etiqueta="Observación"><div class="campo campo--compacto"><label class="sr-only" for="obs-4">Observación de Santiago Vargas</label><input id="obs-4" type="text" value=""></div></td>
+            </tr>
+            <tr>
+              <td data-etiqueta="Código">20260006</td>
+              <td data-etiqueta="Nombre">Camila Beltrán</td>
+              <td data-etiqueta="Nota"><div class="campo campo--compacto"><label class="sr-only" for="nota-5">Nota de Camila Beltrán</label><input class="input-nota" id="nota-5" type="number" step="0.1" min="0" max="5" value="" data-index="5" aria-describedby="error-nota-5"><span class="campo__error" id="error-nota-5" role="alert"><svg class="icono icono--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5M12 17h.01"/></svg>La nota debe estar entre 0.0 y 5.0</span></div></td>
+              <td data-etiqueta="Observación"><div class="campo campo--compacto"><label class="sr-only" for="obs-5">Observación de Camila Beltrán</label><input id="obs-5" type="text" value=""></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="barra-acciones barra-acciones-escritorio">
+        <strong id="contador-pendientes">Pendientes: 2 de 6</strong>
+        <div class="barra-acciones__grupo">
+          <button class="btn btn-secundario" type="button" id="cancelar-cambios">Cancelar cambios</button>
+          <button class="btn btn-primario" type="button" id="guardar-notas" disabled>Guardar notas</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navegación principal móvil">
+    <a href="p1-materias.html"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Inicio</a>
+    <a href="p1-materias.html" class="activo" aria-current="page"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3V5z"/></svg>Materias</a>
+    <a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/></svg>Estudiantes</a>
+    <a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Perfil</a>
+  </nav>
+
+  <div class="modal-overlay" id="modal-descartar" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-descartar" aria-hidden="true">
+    <div class="modal">
+      <h2 class="modal__titulo" id="titulo-modal-descartar">¿Descartar los cambios no guardados?</h2>
+      <p class="texto-auxiliar">Se perderán las notas y observaciones que no hayas guardado.</p>
+      <div class="modal__pie">
+        <button class="btn btn-secundario" type="button" data-cerrar-modal>Cancelar</button>
+        <button class="btn btn-primario" type="button" id="descartar-cambios">Descartar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/datos.js"></script>
+  <script src="../js/navegacion.js"></script>
+  <script src="../js/validaciones.js"></script>
+  <script>
+    (function () {
+      const inputs = [...document.querySelectorAll('.input-nota')];
+      const observaciones = [...document.querySelectorAll('input[id^="obs-"]')];
+      const guardar = document.getElementById('guardar-notas');
+      const contador = document.getElementById('contador-pendientes');
+      const modalId = 'modal-descartar';
+      let sucio = false;
+      let destinoPendiente = null;
+
+      inputs.forEach((input) => { input.dataset.original = input.value; });
+      observaciones.forEach((input) => { input.dataset.original = input.value; });
+
+      function validarCampo(input, mostrar) {
+        const campo = input.closest('.campo');
+        const fila = input.closest('tr');
+        const resultado = validarNota(input.value);
+        const vacio = input.value.trim() === '';
+
+        if (resultado === true || (vacio && !mostrar)) {
+          campo.classList.remove('campo--error');
+          fila.classList.remove('fila--error');
+          input.removeAttribute('aria-invalid');
+          return resultado === true;
+        }
+
+        campo.classList.add('campo--error');
+        fila.classList.add('fila--error');
+        input.setAttribute('aria-invalid', 'true');
+        return false;
+      }
+
+      function actualizarEstado() {
+        const pendientes = inputs.filter((input) => input.value.trim() === '').length;
+        const errores = inputs.filter((input) => validarNota(input.value) !== true).length;
+
+        guardar.disabled = errores > 0;
+        contador.textContent = `Pendientes: ${pendientes} de ${inputs.length}`;
+      }
+
+      inputs.forEach((input) => {
+        validarCampo(input, false);
+        input.addEventListener('input', () => {
+          sucio = true;
+          validarCampo(input, true);
+          actualizarEstado();
+        });
+      });
+
+      observaciones.forEach((input) => {
+        input.addEventListener('input', () => { sucio = true; });
+      });
+
+      guardar.addEventListener('click', () => {
+        if (guardar.disabled) return;
+        document.getElementById('banner-exito').hidden = false;
+        contador.textContent = `Pendientes: 0 de ${inputs.length}`;
+        sucio = false;
+      });
+
+      document.getElementById('cancelar-cambios').addEventListener('click', () => {
+        SIGAV_UI.abrirModal(modalId);
+      });
+
+      document.getElementById('descartar-cambios').addEventListener('click', () => {
+        inputs.concat(observaciones).forEach((input) => {
+          input.value = input.dataset.original;
+          if (input.classList.contains('input-nota')) validarCampo(input, false);
+        });
+        sucio = false;
+        SIGAV_UI.cerrarModal(modalId);
+        actualizarEstado();
+        if (destinoPendiente) window.location.href = destinoPendiente;
+      });
+
+      document.addEventListener('click', (evento) => {
+        if (!sucio) return;
+        const enlace = evento.target.closest('a[href]');
+        if (!enlace || enlace.closest('.modal-overlay')) return;
+        evento.preventDefault();
+        destinoPendiente = enlace.href;
+        SIGAV_UI.abrirModal(modalId);
+      }, true);
+
+      window.addEventListener('beforeunload', (evento) => {
+        if (!sucio) return;
+        evento.preventDefault();
+        evento.returnValue = '';
+      });
+
+      actualizarEstado();
+    })();
+  </script>
+</body>
+</html>

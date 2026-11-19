@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumen de pago · SIGAV</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/componentes.css">
+  <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body data-pagina="e3" data-perfil="estudiante">
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+  <aside class="sidebar" id="sidebar" aria-label="Menú lateral del estudiante">
+    <div class="sidebar__marca">
+      <span class="logo" aria-hidden="true">SIGAV</span>
+      <span class="sidebar__nombre-sistema">Sistema de Gestión Académica Virtual</span>
+    </div>
+    <p class="sidebar__etiqueta">Menú estudiante</p>
+    <ul class="nav-lista">
+      <li><a href="e1-panel.html" data-nav="e1"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Inicio</a></li>
+      <li><a href="e2-registro-materias.html" data-nav="e3"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3V5z"/><path d="M8 5v16M11 10h4"/></svg>Registro de materias</a></li>
+      <li><a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7"/></svg>Consulta de notas</a></li>
+      <li><a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l5 5v13H6z"/><path d="M14 3v6h6"/></svg>Historial académico</a></li>
+      <li><a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v18l-5-3-5 3z"/><path d="M9 8h6"/></svg>Certificados</a></li>
+    </ul>
+    <div class="sidebar__perfil">
+      <span class="avatar" aria-hidden="true">AL</span>
+      <div><strong>Angelo López</strong><span>Estudiante</span></div>
+    </div>
+  </aside>
+  <div class="sidebar-backdrop"></div>
+
+  <div class="contenedor-app">
+    <header class="barra-superior">
+      <span class="logo" aria-hidden="true">SIGAV</span>
+      <strong>SIGAV</strong>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Abrir menú">
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </header>
+
+    <main id="contenido" class="contenido">
+      <div id="vista-pago">
+        <h1 id="titulo-pago">Resumen de pago</h1>
+        <p class="texto-secundario">Periodo 2026-2 · Matrícula de Angelo López</p>
+
+        <ol class="pasos" aria-label="Progreso de la matrícula">
+          <li class="paso paso--completado"><span class="paso__numero"><svg class="icono icono--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span class="paso__nombre">Seleccionar</span></li>
+          <li class="paso paso--completado"><span class="paso__numero"><svg class="icono icono--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span class="paso__nombre">Validar</span></li>
+          <li class="paso paso--activo"><span class="paso__numero">3</span><span class="paso__nombre">Pagar</span></li>
+          <li class="paso"><span class="paso__numero">4</span><span class="paso__nombre">Confirmar</span></li>
+        </ol>
+
+        <div class="banner banner--error" id="banner-rechazo" role="alert">
+          <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5M12 17h.01"/></svg>
+          <div class="banner__contenido"><p data-banner-texto>El pago fue rechazado por la entidad. Puedes intentarlo de nuevo. Intentos restantes: 2.</p></div>
+          <div class="banner__accion"><a class="btn btn-secundario" href="https://pasarela.ejemplo.edu.co" id="reintentar-pago" aria-disabled="true">Reintentar pago</a></div>
+        </div>
+
+        <div class="rejilla-2">
+          <section class="tarjeta" aria-labelledby="titulo-detalle">
+            <h2 id="titulo-detalle" class="tarjeta__titulo">Detalle de la matrícula</h2>
+            <div class="tabla-contenedor">
+              <table class="tabla">
+                <thead><tr><th scope="col">Código</th><th scope="col">Nombre</th><th scope="col">Créditos</th><th scope="col" class="celda-numero">Valor</th></tr></thead>
+                <tbody>
+                  <tr><td>MAT-202</td><td>Cálculo II</td><td>3</td><td class="celda-numero">$350.000</td></tr>
+                  <tr><td>PRG-202</td><td>Programación II</td><td>4</td><td class="celda-numero">$400.000</td></tr>
+                  <tr><td>BDD-201</td><td>Bases de datos</td><td>3</td><td class="celda-numero">$300.000</td></tr>
+                  <tr><td>ETI-102</td><td>Ética profesional</td><td>2</td><td class="celda-numero">$250.000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="resumen">
+              <div class="resumen__fila"><span>Subtotal</span><strong>$1.300.000</strong></div>
+              <div class="resumen__fila"><span>Descuento</span><strong>−$50.000</strong></div>
+              <div class="resumen__fila resumen__total"><h2>Total a pagar: $1.250.000</h2></div>
+            </div>
+            <p class="texto-auxiliar mt-e3 mb-0">El pago se procesa en la pasarela segura de la universidad. SIGAV no almacena datos de tarjeta.</p>
+          </section>
+
+          <aside class="tarjeta" aria-labelledby="titulo-metodo">
+            <h2 id="titulo-metodo" class="tarjeta__titulo">Método de pago</h2>
+            <div class="tarjeta__cuerpo">
+              <p>Serás redirigido a la pasarela segura de la universidad para completar el pago de la matrícula.</p>
+              <p class="mt-e3 mb-0"><strong>Fecha límite de pago: 28 de noviembre de 2026, 23:59</strong></p>
+            </div>
+            <div class="tarjeta__pie tarjeta__pie--apilado">
+              <a class="btn btn-primario btn--bloque" href="https://pasarela.ejemplo.edu.co" target="_blank" rel="noopener">
+                <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                Pagar con la pasarela segura
+              </a>
+              <p class="texto-auxiliar mt-e3 mb-0">El botón abre la pasarela externa de la universidad (URL de marcador).</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <section class="confirmacion" id="vista-confirmada" aria-labelledby="titulo-confirmada" hidden>
+        <span class="confirmacion__icono"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <h1 id="titulo-confirmada">Matrícula confirmada</h1>
+        <p class="texto-secundario">Tu matrícula del periodo 2026-2 quedó registrada.</p>
+        <div class="confirmacion__acciones">
+          <button class="btn btn-secundario" type="button">Descargar comprobante</button>
+          <a class="btn btn-primario" href="e1-panel.html">Volver al panel</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="pago-fijo-movil" id="pago-fijo">
+    <a class="btn btn-primario" href="https://pasarela.ejemplo.edu.co" target="_blank" rel="noopener">
+      <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      Pagar con la pasarela segura
+    </a>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navegación principal móvil">
+    <a href="e1-panel.html" data-nav="e1"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Inicio</a>
+    <a href="e2-registro-materias.html" data-nav="e3"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3V5z"/></svg>Materias</a>
+    <a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7"/></svg>Notas</a>
+    <a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Perfil</a>
+  </nav>
+
+  <script src="../js/datos.js"></script>
+  <script src="../js/navegacion.js"></script>
+  <script>
+    (function () {
+      const estado = SIGAV_UI.parametroURL('estado');
+      const reintentar = document.getElementById('reintentar-pago');
+
+      if (estado === 'aprobado') {
+        document.getElementById('vista-pago').hidden = true;
+        document.getElementById('pago-fijo').hidden = true;
+        document.getElementById('vista-confirmada').hidden = false;
+      } else if (estado === 'rechazado') {
+        reintentar.removeAttribute('aria-disabled');
+      } else {
+        reintentar.addEventListener('click', (evento) => evento.preventDefault());
+      }
+    })();
+  </script>
+</body>
+</html>

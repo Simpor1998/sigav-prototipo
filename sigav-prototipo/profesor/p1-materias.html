@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materias asignadas · SIGAV</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/componentes.css">
+  <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body data-pagina="p1-materias" data-perfil="profesor">
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+  <aside class="sidebar" id="sidebar" aria-label="Menú lateral del profesor">
+    <div class="sidebar__marca">
+      <span class="logo" aria-hidden="true">SIGAV</span>
+      <span class="sidebar__nombre-sistema">Sistema de Gestión Académica Virtual</span>
+    </div>
+    <p class="sidebar__etiqueta">Menú profesor</p>
+    <ul class="nav-lista">
+      <li><a href="p1-materias.html" data-nav="p1"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Inicio</a></li>
+      <li><a href="p1-materias.html" data-nav="p1-materias"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3V5z"/><path d="M8 5v16"/></svg>Materias asignadas</a></li>
+      <li><a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>Clases virtuales</a></li>
+      <li><a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5a3 3 0 0 1 0 6M17 14a6 6 0 0 1 4 6"/></svg>Consulta de estudiantes</a></li>
+    </ul>
+    <div class="sidebar__perfil">
+      <span class="avatar" aria-hidden="true">CR</span>
+      <div><strong>Carlos Ramírez</strong><span>Profesor</span></div>
+    </div>
+  </aside>
+  <div class="sidebar-backdrop"></div>
+
+  <div class="contenedor-app">
+    <header class="barra-superior">
+      <span class="logo" aria-hidden="true">SIGAV</span>
+      <strong>SIGAV</strong>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="sidebar" aria-label="Abrir menú">
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </header>
+
+    <main id="contenido" class="contenido">
+      <h1>Hola, Carlos</h1>
+      <p class="texto-secundario">Periodo 2026-2 · Tienes 3 materias asignadas</p>
+
+      <div class="rejilla-materias rejilla-materias--con-margen">
+        <article class="tarjeta tarjeta-profesor">
+          <span class="tarjeta-materia__codigo">MAT-202</span>
+          <h3>Cálculo II</h3>
+          <p class="tarjeta-profesor__estudiantes"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5a3 3 0 0 1 0 6M17 14a6 6 0 0 1 4 6"/></svg>30 estudiantes inscritos</p>
+          <div class="tarjeta-profesor__notas">
+            <div class="progreso"><div class="progreso__relleno progreso__relleno--60"></div></div>
+            <div class="progreso__texto"><span>Notas registradas: 18 de 30</span><span>60 %</span></div>
+          </div>
+          <p><span class="pildora pildora--advertencia"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>En progreso</span></p>
+          <div class="tarjeta__pie"><a class="btn btn-primario" href="p2-registro-notas.html">Registrar notas</a></div>
+        </article>
+
+        <article class="tarjeta tarjeta-profesor">
+          <span class="tarjeta-materia__codigo">PRG-101</span>
+          <h3>Programación I</h3>
+          <p class="tarjeta-profesor__estudiantes"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5a3 3 0 0 1 0 6M17 14a6 6 0 0 1 4 6"/></svg>28 estudiantes inscritos</p>
+          <div class="tarjeta-profesor__notas">
+            <div class="progreso"><div class="progreso__relleno progreso__relleno--60"></div></div>
+            <div class="progreso__texto"><span>Notas registradas: 17 de 28</span><span>60 %</span></div>
+          </div>
+          <p><span class="pildora pildora--advertencia"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>En progreso</span></p>
+          <div class="tarjeta__pie"><a class="btn btn-primario" href="p2-registro-notas.html">Registrar notas</a></div>
+        </article>
+
+        <article class="tarjeta tarjeta-profesor">
+          <span class="tarjeta-materia__codigo">BDD-201</span>
+          <h3>Bases de datos</h3>
+          <p class="tarjeta-profesor__estudiantes"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5a3 3 0 0 1 0 6M17 14a6 6 0 0 1 4 6"/></svg>25 estudiantes inscritos</p>
+          <div class="tarjeta-profesor__notas">
+            <div class="progreso"><div class="progreso__relleno progreso__relleno--60"></div></div>
+            <div class="progreso__texto"><span>Notas registradas: 15 de 25</span><span>60 %</span></div>
+          </div>
+          <p><span class="pildora pildora--exito"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Completo</span></p>
+          <div class="tarjeta__pie"><a class="btn btn-primario" href="p2-registro-notas.html">Registrar notas</a></div>
+        </article>
+      </div>
+
+      <section class="tarjeta tarjeta-clases" aria-labelledby="titulo-clases">
+        <h2 id="titulo-clases" class="tarjeta__titulo">Clases virtuales</h2>
+        <p class="tarjeta__cuerpo">Accede al aula virtual de tus materias asignadas para gestionar sesiones y materiales.</p>
+        <div class="tarjeta__pie"><a class="btn btn-secundario" href="../index.html#en-construccion">Abrir aula virtual</a></div>
+      </section>
+    </main>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navegación principal móvil">
+    <a href="p1-materias.html" data-nav="p1"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Inicio</a>
+    <a href="p1-materias.html" data-nav="p1-materias" class="activo"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3V5z"/></svg>Materias</a>
+    <a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/></svg>Estudiantes</a>
+    <a href="../index.html#en-construccion"><svg class="icono" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Perfil</a>
+  </nav>
+
+  <script src="../js/datos.js"></script>
+  <script src="../js/navegacion.js"></script>
+</body>
+</html>
